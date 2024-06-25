@@ -1,0 +1,337 @@
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$danger-color: #dc3545;
+$danger-hover-color: #c82333;
+$background-color: #f8f9fa;
+$border-color: #dee2e6;
+$text-color: #333;
+
+.meals-list .row {
+  width: 100%;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main{
+  margin-left: 15%;
+}
+.search-bar-meals{
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  min-width: 20%;
+  margin-left: 80%;
+  padding: 6px;
+  border-radius: 7px;
+}
+
+
+
+
+
+.content .container .one {
+
+   display: 'flex';
+    justify-content: 'space-between'; 
+    margin-bottom: '40px';
+
+}
+
+.e-button-meals {
+  background-color:  #007bff;
+  color: rgb(248, 240, 240);
+  border: none;
+  padding: 15px 35px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  align-items: flex-end;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.meal_button_style {
+  background-color:    #007bff;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  align-items: flex-end;
+  &:hover {
+    background-color:  #007bff;
+  }
+}
+
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+
+.meal-card {
+  
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%; /* Ensure the card takes the full width */
+  max-width: 300px; /* Ensure the card doesn't exceed 300px */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  height: 310px;
+
+  .meal-card-content {
+    margin-bottom: 10px;
+    margin: 25px;
+    overflow: hidden;
+    strong {
+      color: $text-color;
+    }
+  }
+
+  .meal-card-actions {
+    display: flex;
+    // justify-content: flex-end; // Align actions to the right
+    .meal-card-icons {
+      display: flex;
+      gap: 10px; // Space between icons
+      font-size: 20px;
+      margin-left: 80px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn-secondary {
+      color: $primary-color;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    .btn-danger {
+      color: $danger-color;
+      &:hover {
+        color: $danger-hover-color;
+      }
+    }
+  }
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+.meal-card-content .card-header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .meal_button_style {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .meal-card-content
+  .card-header {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .meals-list {
+    padding: 0 10px;
+  }
+
+  .meal-card {
+    padding: 15px;
+    min-width: 50%;
+    max-width: none;
+    height: 330px;
+  }
+
+  .search-bar-meals{
+    display: flex; 
+    justify-content: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 42%;
+    margin-left: 27%;
+    padding: 10px;
+    border-radius: 10px;
+  
+  }
+  .container .pdf-container .meal_button_style{
+    font-size: 22px;
+    padding: 11px 40px;
+    max-width: 40%;
+
+  }
+  .container .pdf-container .e-button-meals {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 13px 35px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .meal-card-content {
+    padding: 5px;
+    margin-left: 1px;
+  }
+
+  .meal-card-actions .meal-card-icons .pdf-link{
+    font-size: 20px;
+    // margin-left: 250px;
+    margin-right: -25px;
+    margin-top: 5px;
+
+  }
+  .meal-card-actions .meal-card-icons .blue{
+
+    font-size: 20px;
+    margin-right: 40px;
+    margin-left: 20px;
+
+
+  }
+  .meal-card-actions .meal-card-icons .red{
+
+    font-size: 20px;
+    margin-left: -20px;
+  }
+  .meal-card-actions {
+    margin-left: -50px;
+  }
+ 
+}
+
+@media (max-width: 576px) {
+
+
+  .main .container .pdf-container {
+    margin-left: 30px;
+  }
+
+  .container .e-button-meals {
+    width: 80%;
+    padding: 4px;
+    font-size: 12px;
+    //margin-bottom: 20px;
+    margin-right: 1px;
+    margin-left: 50px;
+  }
+
+  .meal_button_style {
+    width: 50%;
+    padding: 3px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  .search-bar-meals{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    min-width: 61%;
+    margin-left: 27%;
+    padding: 6px;
+    border-radius: 7px;
+  
+  }
+
+
+
+  .meal-card {
+    padding: 5px 5px;
+    max-width: 100%;
+    margin-left: 5%;
+  }
+  .meal-card .meal-card-content {
+    padding: 5px;
+    margin-left: 40px;
+  }
+
+  .main
+  .meal-card-actions .meal-card-icons .pdf-link{
+    font-size: 15px;
+    margin-left: -20px;
+    margin-top: 10px;
+
+  }
+  .meal-card-actions .meal-card-icons .blue{
+
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .meal-card-actions .meal-card-icons{
+    margin-left: -100px;
+    
+  }
+  .meal-card-actions{
+    margin-left: 20px;
+  }
+
+  .container .pdf-container .e-button-meals {
+    width: 72%;
+    padding: 6px;
+    font-size: 18px;
+    margin-right: 41px;
+    margin-left: -9px;
+  }
+  .container .pdf-container .meal_button_style{
+    font-size: 18px;
+    padding: 18px;
+    max-width: 52%
+
+  }
+  .pagination {
+    margin-left: 30px;
+
+
+  }
+
+}
+
+
+
+
+
+$lg-columns: 12;
+$md-columns: 12;
+$sm-columns: 12;
+
+// Define mixin for grid columns
+@mixin grid-columns($lg, $md, $sm) {
+  @media (min-width: 1200px) {
+    width: percentage($lg / $lg-columns);
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: percentage($md / $md-columns);
+  }
+  @media (min-width: 576px) and (max-width: 991px) {
+    width: percentage($sm / $sm-columns);
+  }
+}
+

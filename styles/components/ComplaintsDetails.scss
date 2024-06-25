@@ -1,0 +1,315 @@
+
+
+
+
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$danger-color: #dc3545;
+$danger-hover-color: #c82333;
+$background-color: #f8f9fa;
+$border-color: #dee2e6;
+$text-color: #333;
+
+body {
+  font-family: Arial, sans-serif;
+ overflow-x: hidden;
+}
+
+.Complaints-Title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.search-bar {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: -170px;
+}
+
+.e_button_complaints {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  margin-left: 150px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  //align-items: flex-end;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.complaints_button_style {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  cursor: pointer;
+  margin-right: -93px;
+  font-size: 20px;
+  border-radius: 5px;
+  align-items: flex-end;complaints-cards
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.complaints-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.complaints-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; /* Ensure the cards container takes the full width */
+}
+
+.complaint-card {
+  position: relative; // Ensure the card positions its children relative to itself
+ // background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: 112px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.complaint-card-content {
+  margin-bottom: 10px;
+  margin: 25px;
+  overflow: hidden;
+  strong {
+    color: $text-color;
+  }
+}
+
+.complaint-card-actions {
+  position: absolute; // Ensure actions are always positioned correctly
+  bottom: 10px; // Adjust to position buttons at the bottom
+  right: 10px; // Adjust to position buttons at the right
+  display: flex;
+  gap: 10px;
+
+  .complaint-card-icons {
+    display: flex;
+    gap: 10px; // Space between icons
+    font-size: 20px;
+
+    a, button {
+      z-index: 1; // Ensure the buttons are on top
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: $primary-color;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    .btn-delete-complaints {
+      color: $danger-color;
+      &:hover {
+        color: $danger-hover-color;
+      }
+    }
+  }
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+.complaint-card-content .card-header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.SearchContainer_complaints{
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 97%;
+  margin-left: 40%;
+  padding: 10px;
+}
+.body{
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .complaints_button_style {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .complaints-list {
+    padding: 0 10px;
+  }
+
+  .complaint-card {
+    padding: 15px;
+    width: 100%;
+    gap: 50px;
+    max-width: none;
+  }
+ 
+  .e_button_complaints {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 35px;
+    margin-left: 59px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  .complaints_button_style {
+    background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 6px 21px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-left: 12px;
+        /* gap: 12px; */
+        align-items: flex-end;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  .SearchContainer_complaints{
+         display: flex; 
+          justify-content: center;
+          padding: 0 10px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          width: 131%;
+          margin-left: -7%;
+          padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flex-grow-1 {
+    justify-content: center;
+    padding: 0 10px;
+    margin-left: 50px;
+  }
+
+  .e_button {
+    width: 80%;
+    padding: 4px;
+    font-size: 12px;
+    //margin-bottom: 20px;
+    margin-right: 1px;
+    margin-left: 50px;
+  }
+
+
+
+  .search-bar {
+    min-width: 50%;
+    //margin-bottom: 10px;
+  }
+
+  .complaint_card_style {
+    width: 50%;
+    padding: 3px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  .complaint-card {
+    padding: 15px;
+    width: 90%; /* Ensure the card takes the full width on small screens */
+    margin-left: 40px;
+    overflow: hidden;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .complaint-card {
+    padding: 15px;
+    width: 90%; 
+    margin-left: 40px;
+    height: 350px;
+    overflow: hidden;
+  }
+
+
+   html, body {
+    max-width: 100vw; 
+ overflow-x: hidden;
+   }
+}
+
+
+
+
+
+// Define variables for grid breakpoints
+$lg-columns: 12;
+$md-columns: 12;
+$sm-columns: 12;
+
+// Define mixin for grid columns
+@mixin grid-columns($lg, $md, $sm) {
+  @media (min-width: 1200px) {
+    width: percentage($lg / $lg-columns);
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: percentage($md / $md-columns);
+  }
+  @media (min-width: 576px) and (max-width: 991px) {
+    width: percentage($sm / $sm-columns);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
